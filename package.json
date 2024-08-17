@@ -1,0 +1,6 @@
+{
+  "name": "salesian-hackbotics",
+  "workspaces": [
+    "web"
+  ]
+}
