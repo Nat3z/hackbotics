@@ -4,6 +4,8 @@ import { Image } from 'astro:assets';
 import Card from '../components/Card.astro';
 import Emoji from 'astro-emoji';
 import ScpShield from '../../public/scp-shield.png';
+import HCBIcon from '../../public/hcb-icon.svg';
+import GradLogo from '../../public/grad_logo.png';
 ---
 
 <Layout title="Salesian Hackbotics">
@@ -14,7 +16,7 @@ import ScpShield from '../../public/scp-shield.png';
 				Nerds at Salesian College Preparatory who participate in robotics competitions and run hackathons. 
 			</h2>	
 
-			<a href="https://maps.app.goo.gl/tkwmq5HzUjMA681G7" target="_blank" class="font-inter font-medium text-blue-500 border-blue-400 bg-blue-400/25 p-2 px-4 rounded-xl">
+			<a href="https://maps.app.goo.gl/tkwmq5HzUjMA681G7" target="_blank" class="font-inter font-medium text-blue-500 border-blue-400 bg-blue-400/25 p-2 px-4 rounded-2xl">
 				<Emoji symbol="📍" label="located" />
 				{' '}
 				2851 Salesian Ave, Richmond, CA 94804
@@ -24,10 +26,26 @@ import ScpShield from '../../public/scp-shield.png';
 			<Image src={ScpShield} alt="Shield" class="w-1/2 drop-shadow-xl" />
 		</div>
 	</main>
+
+	<div class="flex flex-row justify-center items-center gap-16 w-full pb-8">
+		<a href="https://hcb.hackclub.com/donations/start/salesian-hackbotics" target="_blank" class="flex flex-col justify-center items-center bg-red-400/25 w-fit border-2 border-red-400/25 rounded-xl p-8 py-4 text-white gap-2">
+			<span class="flex justify-start items-center flex-row gap-4 w-full">
+				<Image src={HCBIcon} alt="HCB Icon" class="w-12" />
+				<h1 class="font-inter font-semibold text-2xl">Sponsor Us</h1>
+			</span>
+		</a>
+		<a href="https://schedule.nat3z.com" target="_blank" class="flex flex-col justify-center items-center bg-purple-400/25 w-fit border-2 border-purple-400/25 rounded-xl p-8 py-4 text-white gap-2">
+			<span class="flex justify-start items-center flex-row gap-4 w-full">
+				<Image src={GradLogo} alt="DynSchedule Icon" class="w-12" />
+				<h1 class="font-inter font-semibold text-2xl">DynSchedule</h1>
+			</span>
+		</a>
+	</div>
+
 </Layout>
 
 <style>
 	main {
-		@apply w-full h-full text-white;
+		@apply w-full h-5/6 text-white;
 	}
 </style>
