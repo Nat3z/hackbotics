@@ -3,16 +3,16 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Card from '../components/Card.astro';
 import Emoji from 'astro-emoji';
-import ScpShield from '../../public/scp-shield.png';
+import ScpShield from '../../public/favicon.png';
 import HCBIcon from '../../public/hcb-icon.svg';
 import GradLogo from '../../public/grad_logo.png';
 ---
 
 <Layout title="Salesian Hackbotics">
-	<main class="flex justify-center items-center flex-row p-16">
-		<div class="flex flex-col justify-start w-fit items-start gap-4">
-			<h1 class="font-inter font-bold text-left w-full mb-0 text-7xl bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400">We're Salesian Hackbotics</h1>	
-			<h2 class="font-inter font-medium text-4xl w-full">
+	<main class="flex justify-center items-center flex-col-reverse lg:flex-row py-12 lg:p-16">
+		<div class="flex flex-col justify-center lg:justify-start w-full items-center lg:items-start gap-4">
+			<h1 class="font-inter font-bold text-center lg:text-left w-full mb-0 text-5xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-400">We're Salesian Hackbotics</h1>	
+			<h2 class="font-inter font-medium text-center lg:text-left text-2xl lg:text-4xl w-full">
 				Nerds at Salesian College Preparatory who participate in robotics competitions and run hackathons. 
 			</h2>	
 
@@ -22,24 +22,14 @@ import GradLogo from '../../public/grad_logo.png';
 				2851 Salesian Ave, Richmond, CA 94804
 			</a>
 		</div>
-		<div class="w-1/2 flex justify-center items-center">
+		<div class="w-1/2 flex justify-center items-center pb-8 lg:pb-0">
 			<Image src={ScpShield} alt="Shield" class="w-1/2 drop-shadow-xl" />
 		</div>
 	</main>
 
-	<div class="flex flex-row justify-center items-center gap-16 w-full pb-8">
-		<a href="https://hcb.hackclub.com/donations/start/salesian-hackbotics" target="_blank" class="flex flex-col justify-center items-center bg-red-400/25 w-fit border-2 border-red-400/25 rounded-xl p-8 py-4 text-white gap-2">
-			<span class="flex justify-start items-center flex-row gap-4 w-full">
-				<Image src={HCBIcon} alt="HCB Icon" class="w-12" />
-				<h1 class="font-inter font-semibold text-2xl">Sponsor Us</h1>
-			</span>
-		</a>
-		<a href="https://schedule.nat3z.com" target="_blank" class="flex flex-col justify-center items-center bg-purple-400/25 w-fit border-2 border-purple-400/25 rounded-xl p-8 py-4 text-white gap-2">
-			<span class="flex justify-start items-center flex-row gap-4 w-full">
-				<Image src={GradLogo} alt="DynSchedule Icon" class="w-12" />
-				<h1 class="font-inter font-semibold text-2xl">DynSchedule</h1>
-			</span>
-		</a>
+	<div class="flex flex-col lg:flex-row justify-center items-center gap-2 lg:gap-16 w-full pb-8">
+		<Card name="Sponsor Us" image={HCBIcon} link="https://hcb.hackclub.com/donations/start/salesian-hackbotics" accent="#f87171" />
+		<Card name="DynSchedule" image={GradLogo} link="https://schedule.nat3z.com" accent="#c084fc" />
 	</div>
 
 </Layout>
